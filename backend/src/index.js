@@ -8,9 +8,9 @@ const app = express();
 const server =  require('http').Server(app);
 const io = require('socket.io')(server);
 
-mongoose.connect('mongodb+srv://teste:teste@cluster0-evngm.mongodb.net/test?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-});
+// mongoose.connect('mongodb+srv://', {
+    // useNewUrlParser: true,
+// }); removendo informacoes sensiveis
 
 app.use((req, res, next) => {
     req.io = io; 
